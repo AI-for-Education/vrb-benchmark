@@ -1,0 +1,47 @@
+# Example custom model configurations for fdllm
+# Copy this to custom_models.yaml and customize for your needs
+# See: https://github.com/AI-for-Education/fabdata-llm
+
+# Example: OpenAI models with custom settings
+# OpenAI:
+#   Api_Interface: OpenAI
+#   Token_Window: 200000
+#   Token_Limit_Completion: 100000
+#   Tool_Use: True
+#   Vision: True
+#   models:
+#     gpt-4o:
+#       Api_Model_Name: gpt-4o-2024-05-13
+
+# Example: Anthropic Claude models
+# Anthropic:
+#   Api_Interface: Anthropic
+#   Api_Key_Env_Var: ANTHROPIC_API_KEY
+#   Max_Token_Arg_Name: max_tokens
+#   Token_Window: 200000
+#   Vision: True
+#   models:
+#     claude-3-5-sonnet-20241022:
+#       Token_Limit_Completion: 8192
+
+# Example: Google Gemini models
+# Google:
+#   Api_Interface: GoogleGenAI
+#   Api_Key_Env_Var: GEMINI_API_KEY
+#   Max_Token_Arg_Name: max_output_tokens
+#   models:
+#     gemini-2.0-flash:
+#       Vision: True
+#       Token_Window: 1048576
+
+# Example: OpenRouter (multi-provider gateway)
+# OpenRouter:
+#   Api_Interface: OpenAI
+#   Api_Key_Env_Var: OPENROUTER_API_KEY
+#   Client_Args:
+#     base_url: https://openrouter.ai/api/v1
+#   Vision: True
+#   models:
+#     qwen-qvq-72b-preview:
+#       Api_Model_Name: qwen/qvq-72b-preview
+#       Token_Window: 128000
