@@ -38,6 +38,13 @@ pipx install uv
 uv sync
 ```
 
+To run the analysis scripts (in `scripts/`), install the optional analysis dependencies:
+```bash
+pip install vrb-benchmark[analysis]
+# or with uv:
+uv sync --extra analysis
+```
+
 3. Set up API keys:
 ```bash
 cp .env.example .env
