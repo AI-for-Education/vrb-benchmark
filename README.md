@@ -28,7 +28,7 @@ VRB Benchmark provides a standardized pipeline for:
 
 1. Clone this repository:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/AI-for-Education/vrb-benchmark.git
 cd vrb-benchmark
 ```
 
@@ -40,8 +40,6 @@ uv sync
 
 To run the analysis scripts (in `scripts/`), install the optional analysis dependencies:
 ```bash
-pip install vrb-benchmark[analysis]
-# or with uv:
 uv sync --extra analysis
 ```
 
@@ -63,7 +61,7 @@ Required API keys depend on which models you want to evaluate. Common ones:
 Run the included example with a simple test:
 
 ```bash
-python scripts/example_benchmark.py
+uv run python scripts/example_benchmark.py
 ```
 
 This evaluates GPT-4o on a single test question about counting circles.
@@ -103,16 +101,16 @@ The easiest way to run evaluations is using the CLI script:
 
 ```bash
 # Run on test dataset
-python scripts/run_evaluation.py --model gpt-4o --dataset test
+uv run python scripts/run_evaluation.py --model gpt-4o --dataset test
 
 # Run with custom settings
-python scripts/run_evaluation.py --model claude-3-5-sonnet-20241022 --dataset your-dataset --max-tokens 50000
+uv run python scripts/run_evaluation.py --model claude-3-5-sonnet-20241022 --dataset your-dataset --max-tokens 50000
 
 # Start fresh (no resume)
-python scripts/run_evaluation.py --model gpt-4o --dataset test --no-resume
+uv run python scripts/run_evaluation.py --model gpt-4o --dataset test --no-resume
 
 # See all options
-python scripts/run_evaluation.py --help
+uv run python scripts/run_evaluation.py --help
 ```
 
 ### Basic evaluation script (Python API)
